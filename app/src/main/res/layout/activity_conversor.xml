@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_conversor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.adolfalcantara.conversortemperatura.Conversor">
+
+    <TextView
+        android:text="Temperatura a convertir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:id="@+id/textView"
+        tools:textColor="@android:color/black"
+        tools:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/etTemperatura"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Escala Actual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvEscalaActual"
+        tools:textColor="@android:color/black"
+        tools:textSize="14sp"
+        android:layout_alignBottom="@+id/spEscalaActual"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="38dp" />
+
+    <TextView
+        android:text="Escala Deseada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvEscalaDeseada"
+        tools:textColor="@android:color/black"
+        tools:textSize="14sp"
+        android:layout_alignBaseline="@+id/tvEscalaActual"
+        android:layout_alignBottom="@+id/tvEscalaActual"
+        android:layout_toRightOf="@+id/etTemperatura"
+        android:layout_toEndOf="@+id/etTemperatura" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTempConvertida"
+        tools:textColor="@android:color/black"
+        tools:textSize="18sp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/spEscalaActual"
+        android:layout_alignStart="@+id/spEscalaActual"
+        android:layout_marginBottom="54dp"
+        android:layout_alignRight="@+id/tvEscalaActual"
+        android:layout_alignEnd="@+id/tvEscalaActual" />
+
+    <TextView
+        android:text="Temperatura Deseada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        tools:textColor="@android:color/black"
+        tools:textSize="16sp"
+        android:layout_marginBottom="55dp"
+        android:layout_alignBottom="@+id/tvTempConvertida"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Calcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btConvertir"
+        android:visibility="visible"
+        android:onClick="calcular"
+        android:layout_marginBottom="46dp"
+        android:layout_above="@+id/textView4"
+        android:layout_alignLeft="@+id/spEscalaActual"
+        android:layout_alignStart="@+id/spEscalaActual" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_marginTop="94dp"
+        android:id="@+id/spEscalaActual"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etTemperatura"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textView4"
+        android:layout_alignEnd="@+id/textView4" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spEscalaDeseada"
+        android:layout_alignTop="@+id/spEscalaActual"
+        android:layout_alignLeft="@+id/tvEscalaDeseada"
+        android:layout_alignStart="@+id/tvEscalaDeseada"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
