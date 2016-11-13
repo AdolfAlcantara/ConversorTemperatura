@@ -102,5 +102,10 @@ public class Conversor extends AppCompatActivity {
         tvTempConvertida.setText(""+temperatura);
         Toast.makeText(this,"Temperatura Calculada",Toast.LENGTH_SHORT).show();
 
-    }
-}
+    }//Fin Boton calcular
+
+    public void limpiar(View view) {
+        tvTempConvertida.setText("");
+        etTemperatura.setText("");
+    }//Fin Boton Limpiar
+}//Fin de clase

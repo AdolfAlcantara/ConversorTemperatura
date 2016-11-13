@@ -96,6 +96,18 @@
         android:layout_alignLeft="@+id/spEscalaActual"
         android:layout_alignStart="@+id/spEscalaActual" />
 
+    <Button
+        android:text="Limpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btLimpiar"
+        android:visibility="visible"
+        android:onClick="limpiar"
+        android:layout_marginBottom="46dp"
+        android:layout_above="null"
+        android:layout_alignLeft="null"
+        android:layout_alignStart="null" />
+
     <Spinner
         android:layout_width="wrap_content"
         android:layout_marginTop="94dp"
